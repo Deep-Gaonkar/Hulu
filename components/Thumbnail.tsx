@@ -33,4 +33,6 @@ const Thumbnail = forwardRef(({ result }: { result: MovieType }, ref: LegacyRef<
   )
 })
 
+Thumbnail.displayName = 'Thumbnail'
+
 export default Thumbnail
