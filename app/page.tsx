@@ -13,7 +13,6 @@ import Results from "@/components/Results";
 
 export default function Home() {
   const [results, setResults] = useState<MovieType[] | []>([])
-  console.log(results)
 
   const searchParams = useSearchParams()
   const genre = searchParams.get('genre') || 'fetchTrending'

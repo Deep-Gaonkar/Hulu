@@ -1,3 +1,5 @@
+import { requests } from "./constants";
+
 export default interface HeaderItemProps {
   title: string,
   Icon: React.ForwardRefExoticComponent<Omit<React.SVGProps<SVGSVGElement>, "ref"> & {
@@ -6,7 +8,7 @@ export default interface HeaderItemProps {
   } & React.RefAttributes<SVGSVGElement>>
 }
 
-export type genreType = 'fetchTrending' | 'fetchTopRated' | 'fetchActionMovies' | 'fetchComedyMovies' | 'fetchHorrorMovies' | 'fetchRomanceMovies' | 'fetchMystery' | 'fetchSciFi' | 'fetchWestern' | 'fetchAnimation' | 'fetchTV'
+export type genreType = keyof typeof requests
 
 export type MovieType = {
   adult: boolean;
